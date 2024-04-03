@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100vh;
+    position: relative
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 16% 84%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.sidebar img {
+    filter: invert(100%);
+}
+
+.sidebar li img {
+    max-width: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.cardSection {
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    justify-content: space-between;
+}
+.card:first-child .bg {
+    background-color: #c8e6c9;
+}
+.card:nth-child(2) .bg {
+    background-color: #ce93d8;
+}
+.card:nth-child(3) .bg {
+    background-color: #a0d1e0;
+}
+.card:nth-child(4) .bg {
+    background-color: pink;
+}
+.graph {
+    grid-template-columns: 68% 30%;
+    justify-content: space-between;
+}
+.bar {
+    height: 250px;
+    
+}
+.graph_1 {
+    height: 600px;
+}
+.menu_icon {
+    position: absolute
+}
+
+@media screen and (max-width: 1400px) {
+    .cardSection {
+        grid-template-columns: 24% 24% 24% 24%;
+    }
+    .card {
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 1200px) { 
+    .cardSection {
+        grid-template-columns: repeat(auto-fill, minmax(363px, max-content));
+    }
+    .card {
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .card>div {
+        margin-right: 0;
+    }
+    .container {
+        grid-template-columns: 20% 80%;
+    }
+}
+@media screen and (max-width: 991px) { 
+    .cardSection {
+        grid-template-columns: repeat(auto-fill, minmax(363px, max-content));
+    }
+    .sidebar {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 100%;
+    }
+    .graph {
+        grid-template-columns: 100%;
+    }
+    .graph>div:nth-child(2) {
+        margin-top: 2rem;
+    }
+    .productTable {
+        overflow: auto;
+    }
+    .productTable>div {
+        min-width: 600px;
+    }
+}
+@media screen and (max-width: 767px) { 
+    .cardSection {
+        grid-template-columns: repeat(auto-fill, minmax(303px, max-content));
+    }
+}
+@media screen and (max-width: 677px) { 
+    .cardSection {
+        grid-template-columns: repeat(auto-fill, minmax(259px, max-content));
+    }
+}
+@media screen and (max-width: 576px) { 
+    .cardSection {
+        grid-template-columns: repeat(auto-fill, minmax(300px, max-content));
+        justify-content: center;
+    }
+    .header_part {
+        flex-direction: column;
+    }
+    .header_part p {
+        margin-bottom: 2rem;
+    }
+    .header_part .topSearch {
+        padding: 10px;
+    }
+}
